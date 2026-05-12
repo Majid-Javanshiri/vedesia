@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Vazirmatn:wght@100;300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Vazirmatn", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", "Vazirmatn", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-gold: #C5A059;
+  --color-gold-light: #D4B67D;
+  --color-gold-dark: #9C7B41;
+  --color-cream: #F8F5F0;
+  --color-onyx: #0A0A0A;
+}
+
+@layer base {
+  body {
+    @apply bg-onyx text-cream/90 font-sans antialiased selection:bg-gold/30;
+    direction: rtl;
+    background-image: 
+      radial-gradient(circle at 50% 0%, rgba(197, 160, 89, 0.08) 0%, transparent 50%),
+      url("https://www.transparenttextures.com/patterns/dark-matter.png");
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .luxury-glass {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/10;
+  }
+  
+  .luxury-card {
+    @apply bg-white/[0.02] border border-white/5 hover:border-gold/30 hover:bg-white/[0.04] transition-all duration-500;
+  }
+  
+  .gold-gradient {
+    @apply bg-gradient-to-tr from-gold-dark via-gold to-gold-light;
+  }
+
+  .italy-accent {
+    @apply flex gap-0.5 items-center;
+  }
+  .italy-accent span:nth-child(1) { @apply w-1.5 h-1.5 rounded-full bg-[#009246]; }
+  .italy-accent span:nth-child(2) { @apply w-1.5 h-1.5 rounded-full bg-[#FFFFFF]; }
+  .italy-accent span:nth-child(3) { @apply w-1.5 h-1.5 rounded-full bg-[#CE2B37]; }
+}
+
+/* Custom Scrollbar for Luxury Look */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A059/30;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059/60;
+}
