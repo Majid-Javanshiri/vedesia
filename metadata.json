@@ -2,5 +2,5 @@
   "name": "VEDESIA | Global Marketing Hub",
   "description": "Comprehensive marketing strategy and project management dashboard for VEDESIA's global expansion, featuring over 215 strategic initiatives across 6 phases.",
   "requestFramePermissions": [],
-  "majorCapabilities": []
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
